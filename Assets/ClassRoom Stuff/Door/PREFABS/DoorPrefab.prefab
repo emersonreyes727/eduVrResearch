@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33780767990168600}
   - component: {fileID: 23987021255395842}
   - component: {fileID: 65987267168663016}
-  - component: {fileID: 114979735103950660}
   m_Layer: 0
   m_Name: DoorPrefab
   m_TagString: Untagged
@@ -94,23 +93,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.200006, y: 1.0000428, z: 1.0001268}
   m_Center: {x: 0.000000029802322, y: 0, z: 0}
---- !u!114 &114979735103950660
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1430922505192950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731917776111cfd4e8e238be7a676f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitialAngle: 0
-  RotationAngle: 90
-  HingePosition: 0
-  RotationSide: 0
-  Speed: 3
-  TimesMoveable: 0
-  Running: 0
-  VisualizeHinge: 0
-  HingeColor: {r: 0, g: 1, b: 1, a: 1}

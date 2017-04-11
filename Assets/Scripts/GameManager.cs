@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private VideoPlayer pc;
 	[SerializeField] private VideoPlayer table;
 
+	[SerializeField] private Transform cubeTransform;
+	[SerializeField] private Transform cameraTransform;
+
 	public GameObject startUi;
 	public GameObject endUi;
 
@@ -20,6 +23,11 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void MoveCamera () {
+		cameraTransform.position = new Vector3 (cubeTransform.position.x, cubeTransform.position.y, cubeTransform.position.z);
+		//endUi.SetActive(false);
 	}
 
 	public void PlayProjector () {
