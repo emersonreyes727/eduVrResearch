@@ -4,7 +4,7 @@ using System.Collections;
 public class WaypointMovement : MonoBehaviour {
 	
 	public GameObject player;
-
+	private AudioSource audio;
 
 	public float height = 2;
 	public bool teleport = true;
@@ -14,7 +14,7 @@ public class WaypointMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -33,8 +33,8 @@ public class WaypointMovement : MonoBehaviour {
 			);
 		} else {
 			player.transform.position = new Vector3 (waypoint.GetComponent<Transform> ().position.x, waypoint.GetComponent<Transform> ().position.y + height / 2, waypoint.GetComponent<Transform> ().position.z);
+			audio.Play ();
 		}
 	}
-
 }
 

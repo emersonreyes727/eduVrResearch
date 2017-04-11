@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private VideoPlayer pc;
 	[SerializeField] private VideoPlayer table;
 
+	public GameObject startUi;
+	public GameObject endUi;
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -41,5 +44,14 @@ public class GameManager : MonoBehaviour {
 
 	public void PauseTable () {
 		table.Pause ();
+	}
+
+	public void closeStartUi () {
+		startUi.SetActive(false);
+		endUi.SetActive(true);
+	}
+
+	public void endApp () {
+		Application.Quit ();
 	}
 }
